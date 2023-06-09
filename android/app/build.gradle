@@ -113,13 +113,17 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.veryfilensreactnativeexpodemo"
+    namespace 'com.veryfi.lens.expodemo'
     defaultConfig {
-        applicationId "com.veryfilensreactnativeexpodemo"
+        applicationId 'com.veryfi.lens.expodemo'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
+    }
+
+    aaptOptions {
+        noCompress "veryfi"
     }
 
     splits {

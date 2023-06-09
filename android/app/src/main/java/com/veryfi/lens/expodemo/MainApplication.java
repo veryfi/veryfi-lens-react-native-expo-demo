@@ -1,4 +1,4 @@
-package com.veryfilensreactnativeexpodemo;
+package com.veryfi.lens.expodemo;
 
 import android.app.Application;
 import android.content.res.Configuration;

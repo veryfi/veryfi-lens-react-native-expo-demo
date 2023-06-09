@@ -7,13 +7,25 @@
       "**/*"
     ],
     "plugins": [
-      "expo-build-properties",
-      {
-        "android": {
-            "compileSdkVersion": 32,
-            "targetSdkVersion": 32
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 23,
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33
+          }
         }
+      ]
+    ],
+    "android": {
+      "package": "com.veryfi.lens.expodemo"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "87ffa316-fb59-4d40-95aa-5f13e47a81a0"
       }
-    ]
+    },
+    "owner": "seramirez-veryfi"
   }
 }
