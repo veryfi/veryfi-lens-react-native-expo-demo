@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "veryfi-lens-react-native-expo-demo",
+    "slug": "veryfi-lens-react-native-expo-demo",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 23,
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33
+          }
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.veryfi.lens.expodemo"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "87ffa316-fb59-4d40-95aa-5f13e47a81a0"
+      }
+    },
+    "owner": "seramirez-veryfi"
+  }
+}
