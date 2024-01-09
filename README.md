@@ -42,8 +42,8 @@ export NPM_PASSWORD=[PASSWORD]
 ```
 @veryfi:registry=https://nexus.veryfi.com/repository/npm/
 config=set
-//nexus.veryfi.com/repository/npm/:username=${NPM_USERNAME}
-//nexus.veryfi.com/repository/npm/:_password=${NPM_PASSWORD}
+//nexus.veryfi.com/repository/:username=${NPM_USERNAME}
+//nexus.veryfi.com/repository/:_password=${NPM_PASSWORD}
 ```
 - Your NPM_PASSWORD should be base64 encoded before storing it in an enviroment variable.
 - Run `npm i @veryfi/react-native-veryfi-lens`
