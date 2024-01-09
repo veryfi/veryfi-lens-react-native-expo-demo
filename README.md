@@ -45,6 +45,7 @@ config=set
 //nexus.veryfi.com/repository/npm/:username=${NPM_USERNAME}
 //nexus.veryfi.com/repository/npm/:_password=${NPM_PASSWORD}
 ```
+- Your NPM_PASSWORD should be base64 encoded before storing it in an enviroment variable.
 - Run `npm i @veryfi/react-native-veryfi-lens`
 - Replace credentials in `App.tsx` with yours
 ```
