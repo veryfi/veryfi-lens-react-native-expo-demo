@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/react": "~18.0.27",
-    "@veryfi/react-native-veryfi-lens": "^1.5.26",
+    "@veryfi/react-native-veryfi-lens": "^1.5.27",
     "expo": "~49.0.13",
     "expo-build-properties": "~0.6.0",
     "expo-splash-screen": "~0.18.2",
