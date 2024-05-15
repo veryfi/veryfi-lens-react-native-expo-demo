@@ -55,3 +55,4 @@ web-build/
 dist/
 .npmrc
 package-lock.json
+.env
