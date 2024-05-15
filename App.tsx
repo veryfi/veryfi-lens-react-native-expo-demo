@@ -1,23 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import VeryfiLens from '@veryfi/react-native-veryfi-lens';
 import {
-  StyleSheet,
-  SafeAreaView,
+  VERYFI_CLIENT_ID,
+  VERYFI_USERNAME,
+  VERYFI_API_KEY,
+  VERYFI_URL,
+} from '@env';
+
+import {
   Image,
+  NativeEventEmitter,
+  SafeAreaView,
   ScrollView,
-  TouchableOpacity,
+  StyleSheet,
   Text,
+  TouchableOpacity,
   View,
-  NativeEventEmitter
 } from 'react-native';
 
-import VeryfiLens from '@veryfi/react-native-veryfi-lens';
-
 const veryfiLensCredentials = {
-  url: "YOUR_URL",
-  clientId: "YOUR_CLIENT_ID",
-  userName: "YOUR_USERNAME",
-  apiKey: "YOUR_API_KEY",
+  url: VERYFI_URL,
+  clientId: VERYFI_CLIENT_ID,
+  userName: VERYFI_USERNAME,
+  apiKey: VERYFI_API_KEY,
 };
 
 const veryfiLensSettings = {
@@ -32,12 +38,13 @@ const VeryfiLensEmitter = new NativeEventEmitter(VeryfiLens.NativeModule);
 
 const App = () => {
   const [log, setLog] = useState(
-    "Here you will see JSON results from a scan's data extraction performed by the Veryfi API.\n\n   Look carefully, there are 30+ fields (inc. line items) extracted and understood by Veryfi's AI.\n\n   Before you begin, please find a receipt, bill or invoice. Then when ready, press the green COLLECT button below. This will start the Veryfi Lens camera used to capture, preprocess and prepared the document for real-time data extraction.\n\n If you need help, please contact support@veryfi.com\n\n",
+    "   Here you will see JSON results from a scan's data extraction performed by the Veryfi API.\n\n   Look carefully, there are 30+ fields (inc. line items) extracted and understood by Veryfi's AI.\n\n   Before you begin, please find a receipt, bill or invoice. Then when ready, press the green COLLECT button below. This will start the Veryfi Lens camera used to capture, preprocess and prepared the document for real-time data extraction.\n\n If you need help, please contact support@veryfi.com\n\n",
   );
+
   const [thumbnail, setThumbnail] = useState(
     'https://avatars.githubusercontent.com/u/64030334?s=200&v=4',
   );
-  const updateLog = (event) => {
+  const updateLog = (event: any) => {
     setLog(_log => _log + '\n\n' + JSON.stringify(event, null, ' '));
     if ('msg' in event && event.msg === 'img_original_path') {
       setThumbnail(
@@ -45,10 +52,10 @@ const App = () => {
       );
       VeryfiLens.getFileBase64(
         event.data,
-        (error) => {
+        (error: any) => {
           console.error(`Error found! ${error}`);
         },
-        (dataBase64) => {
+        (dataBase64: any) => {
           console.log(`dataBase64 ${dataBase64} returned`);
         },
       );
@@ -90,24 +97,24 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.background}>
-      <StatusBar />
+      <StatusBar barStyle={'dark-content'} />
       <View style={styles.background}>
         <Text style={styles.title}> {'Welcome to Veryfi Lens Demo'} </Text>
-        <Image style={styles.thumbnail} source={{ uri: thumbnail }} />
+        <Image style={styles.thumbnail} source={{uri: thumbnail}} />
         <View style={styles.logBox}>
           <ScrollView contentInsetAdjustmentBehavior="automatic">
             <Text style={styles.logText}>{log}</Text>
           </ScrollView>
         </View>
-        <TouchableOpacity onPress={showCamera}>
-          <View style={styles.veryfiButton}>
+        <View style={styles.veryfiButton}>
+          <TouchableOpacity onPress={showCamera}>
             <Text style={styles.textBoldCenter}>COLLECT</Text>
-          </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   background: {
@@ -136,7 +143,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     width: 80,
     height: 80,
-    marginBottom: 16,
     borderRadius: 16,
     overflow: 'hidden',
     alignSelf: 'center',
