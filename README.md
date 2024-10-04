@@ -47,7 +47,7 @@ config=set
 ```
 - Your NPM_PASSWORD should be base64 encoded before storing it in an enviroment variable.
 - Run `npm i @veryfi/react-native-veryfi-lens`
-- Replace you API OCR credentials in `App.tsx` with yours
+- Replace your API OCR credentials in `App.tsx` with yours
 ```
 const veryfiLensCredentials = {
   url: 'yourUrl',
