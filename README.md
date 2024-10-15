@@ -47,7 +47,7 @@ config=set
 ```
 - Your NPM_PASSWORD should be base64 encoded before storing it in an enviroment variable.
 - Run `npm i @veryfi/react-native-veryfi-lens`
-- Replace your API OCR credentials in `App.tsx` with yours
+- Replace your API credentials in `app/index.tsx` with yours
 ```
 const veryfiLensCredentials = {
   url: 'yourUrl',
@@ -56,18 +56,46 @@ const veryfiLensCredentials = {
   apiKey: 'yourApiKey',
 };
 ```
-- For Android Check if the build.gradle inside the android/app has the following configuration
+
+or create a `.env` file in the root folder with:
+```
+EXPO_PUBLIC_VERYFI_URL='yourUrl'
+EXPO_PUBLIC_VERYFI_CLIENT_ID='yourClientId'
+EXPO_PUBLIC_VERYFI_USERNAME='yourUsername'
+EXPO_PUBLIC_VERYFI_API_KEY='yourApiKey'
+```
+
+- For Android, check if the `android/app/build.gradle` has the following configuration:
 ```
 android {
-    aaptOptions {
-        noCompress "veryfi"
+    androidResources {
+        noCompress += 'veryfi'
     }
 }
 ```
+
 This is necessary to avoid the compresion of the Veryfi machine learning models
-- Also check in the `manifest.xml` inside `android/app/src/debug` that the `<application>` tag has 
+- Also check in the `android/app/src/main/AndroidManifest.xml` that the `<application>` tag has 
 `tools:replace="android:usesCleartextTraffic,android:allowBackup"` and set the value that you want for that configration in your project
+- Run `npm install` to install all the dependencies
 - Run your desired platform using: `npx expo run:android` or `npx expo run:ios`
+
+In case `npx expo run:android` does not find the Veryfi's Maven repository, add the following lines to `android/app/build.gradle`:
+```
+repositories {
+    maven {
+        url "https://nexus.veryfi.com/repository/maven-releases/"
+        credentials {
+            username = System.getenv("MAVEN_VERYFI_USERNAME")
+            password = System.getenv("MAVEN_VERYFI_PASSWORD")
+        }
+        authentication {
+            basic(BasicAuthentication)
+        }
+    }
+}
+
+```
 
 ### Expo EAS Configuration
 If you use EAS to build your iOS or Android project, you need to add in the `Secrets` section of your EAS project the variable enviroments that you set in the previous step with your credentials.
