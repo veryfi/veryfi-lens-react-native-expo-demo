@@ -21,9 +21,9 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 5. [Get in contact with our team](#contact)
 
 ### Configuration <a name="configuration"></a>
-Min SDK Android 6.0 (API level 23)
+Min SDK Android 7.0 (API level 24)
 
-Min iOS version 12
+Min iOS version 15.1
 - Go to Lens: Maven (Android) section and generate your access credentials [here](https://hub.veryfi.com/api/settings/keys/#package-managers-container).
 - Add your Maven credentials to your system environment. Replace [USERNAME] and [PASSWORD] with the credentials that were set up in the previous step.
 ```
