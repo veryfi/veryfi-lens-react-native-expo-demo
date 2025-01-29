@@ -1289,7 +1289,7 @@ PODS:
     - Yoga
   - react-native-safe-area-context (4.12.0):
     - React-Core
-  - react-native-veryfi-lens (2.0.0):
+  - react-native-veryfi-lens (2.0.4):
     - React-Core
   - React-nativeconfig (0.76.5)
   - React-NativeModulesApple (0.76.5):
@@ -1991,7 +1991,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: c174e11bdea12dce07df8669d6c0dc97eb0c7706
   React-microtasksnativemodule: 4c4eb6c6b6a33765ca9242e4efffb249700ea0df
   react-native-safe-area-context: 142fade490cbebbe428640b8cbdb09daf17e8191
-  react-native-veryfi-lens: d0388084023bfb57ed9720d5fcf76d3c196bc1cb
+  react-native-veryfi-lens: b381ec8e4ad6a749ab948135279eca9c28fbf54d
   React-nativeconfig: f7ab6c152e780b99a8c17448f2d99cf5f69a2311
   React-NativeModulesApple: 70600f7edfc2c2a01e39ab13a20fd59f4c60df0b
   React-perflogger: ceb97dd4e5ca6ff20eebb5a6f9e00312dcdea872
