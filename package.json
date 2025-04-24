@@ -1,7 +1,7 @@
 {
   "name": "veryfi-lens-react-native-expo-demo",
   "main": "expo-router/entry",
-  "version": "2.0.16",
+  "version": "2.0.21",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
@@ -16,7 +16,7 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.4",
     "@react-navigation/native": "^7.0.0",
-    "@veryfi/react-native-veryfi-lens": "^2.0.16",
+    "@veryfi/react-native-veryfi-lens": "^2.0.21",
     "expo": "^52.0.21",
     "expo-constants": "~17.0.3",
     "expo-font": "~13.0.2",
@@ -29,7 +29,7 @@
     "expo-build-properties": "0.13.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-native": "0.76.5",
+    "react-native": "0.76.9",
     "react-native-gesture-handler": "~2.20.2",
     "react-native-reanimated": "~3.16.3",
     "react-native-safe-area-context": "4.12.0",
