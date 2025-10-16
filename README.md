@@ -65,16 +65,6 @@ EXPO_PUBLIC_VERYFI_USERNAME='yourUsername'
 EXPO_PUBLIC_VERYFI_API_KEY='yourApiKey'
 ```
 
-- For Android, check if the `android/app/build.gradle` has the following configuration:
-```
-android {
-    androidResources {
-        noCompress += 'veryfi'
-    }
-}
-```
-
-This is necessary to avoid the compresion of the Veryfi machine learning models
 - Also check in the `android/app/src/main/AndroidManifest.xml` that the `<application>` tag has 
 `tools:replace="android:usesCleartextTraffic,android:allowBackup"` and set the value that you want for that configration in your project
 - Run `npm install` to install all the dependencies
