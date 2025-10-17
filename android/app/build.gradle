@@ -158,9 +158,6 @@ android {
             useLegacyPackaging (findProperty('expo.useLegacyPackaging')?.toBoolean() ?: false)
         }
     }
-    androidResources {
-        noCompress += 'veryfi'
-    }
 }
 
 // Apply static values from `gradle.properties` to the `android.packagingOptions`
