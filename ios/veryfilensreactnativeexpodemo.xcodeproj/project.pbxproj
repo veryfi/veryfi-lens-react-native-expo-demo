@@ -12,6 +12,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		416796744F8B48148CE28349 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00B798A0F44FCDA1F7D627 /* noop-file.swift */; };
+		6B7844292FAA8F3A00E7D99E /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7844282FAA8F3A00E7D99E /* Template.swift */; };
 		8DD89A1F0D0338D6B946B375 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 219FAF87A0CA8392BAC6165E /* PrivacyInfo.xcprivacy */; };
 		96905EF65AED1B983A6B3ABC /* libPods-veryfilensreactnativeexpodemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-veryfilensreactnativeexpodemo.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
@@ -27,6 +28,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = veryfilensreactnativeexpodemo/main.m; sourceTree = "<group>"; };
 		219FAF87A0CA8392BAC6165E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = veryfilensreactnativeexpodemo/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-veryfilensreactnativeexpodemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-veryfilensreactnativeexpodemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7844282FAA8F3A00E7D99E /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-veryfilensreactnativeexpodemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfilensreactnativeexpodemo.debug.xcconfig"; path = "Target Support Files/Pods-veryfilensreactnativeexpodemo/Pods-veryfilensreactnativeexpodemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-veryfilensreactnativeexpodemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veryfilensreactnativeexpodemo.release.xcconfig"; path = "Target Support Files/Pods-veryfilensreactnativeexpodemo/Pods-veryfilensreactnativeexpodemo.release.xcconfig"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = veryfilensreactnativeexpodemo/SplashScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				CB00B798A0F44FCDA1F7D627 /* noop-file.swift */,
 				BE49E6409A804AC8A9098EBC /* veryfilensreactnativeexpodemo-Bridging-Header.h */,
 				219FAF87A0CA8392BAC6165E /* PrivacyInfo.xcprivacy */,
+				6B7844282FAA8F3A00E7D99E /* Template.swift */,
 			);
 			name = veryfilensreactnativeexpodemo;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7844292FAA8F3A00E7D99E /* Template.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
