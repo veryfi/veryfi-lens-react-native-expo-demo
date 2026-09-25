@@ -12,8 +12,17 @@
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
+  Class sceneSupport = NSClassFromString(@"ReactNativeSceneSupport");
+  [sceneSupport performSelector:@selector(prepare)];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
+- (UISceneConfiguration *)application:(UIApplication *)application
+    configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
+                                   options:(UISceneConnectionOptions *)options
+{
+  return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
